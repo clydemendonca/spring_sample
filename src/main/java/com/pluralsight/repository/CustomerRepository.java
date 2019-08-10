@@ -4,6 +4,6 @@ import com.pluralsight.model.Customer;
 
 import java.util.List;
 
-public interface CustomerRespository {
+public interface CustomerRepository {
     List<Customer> findAll();
 }
