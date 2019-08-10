@@ -14,12 +14,17 @@ public class CustomerServiceImpl implements CustomerService {
 //    @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
     @Override
     public List<Customer> findAll() {
         return customerRepository.findAll();
     }
 
-    @Autowired
+//    @Autowired
     public void setCustomerRepository(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
